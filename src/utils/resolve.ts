@@ -189,17 +189,33 @@ const resolver = {
   borderL: (prop) => resolve("border-l", prop),
   borderR: (prop) => resolve("border-r", prop),
   borderColor: (prop) => resolve("border", prop),
-  borderOpacity: (prop) => resolve("", prop),
-  borderStyle: (prop) => resolve("", prop),
-  divide: (prop) => resolve("", prop),
-  divideColor: (prop) => resolve("", prop),
-  divideOpacity: (prop) => resolve("", prop),
-  divideStyle: (prop) => resolve("", prop),
-  ring: (prop) => resolve("", prop),
-  ringColor: (prop) => resolve("", prop),
-  ringOpacity: (prop) => resolve("", prop),
-  ringOffsetWidth: (prop) => resolve("", prop),
-  ringOffsetColor: (prop) => resolve("", prop),
+  borderOpacity: (prop) => resolve("border-opacity", prop),
+  borderStyle: (prop) => resolve("border", prop),
+  divideX: (prop) => resolve("divide-x", prop),
+  divideY: (prop) => resolve("divide-y", prop),
+  divideColor: (prop) => resolve("divide", prop),
+  divideOpacity: (prop) => resolve("divide-opacity", prop),
+  divideStyle: (prop) => resolve("divide", prop),
+  ring: (prop) => resolve("ring", prop),
+  ringColor: (prop) => resolve("ring", prop),
+  ringOpacity: (prop) => resolve("ring-opacity", prop),
+  ringOffsetWidth: (prop) => resolve("ring-offset", prop),
+  ringOffsetColor: (prop) => resolve("ring-offset", prop),
+
+  /** Effects */
+  shadow: (prop) => resolve("shadow", prop),
+  opacity: (prop) => resolve("opacity", prop),
+
+  /** Tables */
+  borderCollapse: (prop) => resolve("border", prop),
+  table: (prop) => resolve("table", prop),
+
+  /** Transitions and Animations */
+  transition: (prop) => resolve("transition", prop),
+  duration: (prop) => resolve("duration", prop),
+  ease: (prop) => resolve("ease", prop),
+  delay: (prop) => resolve("delay", prop),
+  animate: (prop) => resolve("animate", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {

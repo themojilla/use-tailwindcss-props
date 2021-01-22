@@ -70,6 +70,7 @@ import {
 } from "./sizing";
 import { Margin, Padding, SpaceBetween } from "./spacing";
 import { BorderCollapse, TableLayout } from "./table";
+import { Animation, Delay, Duration, Ease, Transition } from "./transition";
 import {
   FontFamily,
   FontSize,
@@ -247,7 +248,8 @@ export interface TailwindProps {
   borderColor?: Responsive<BorderColor>;
   borderOpacity?: Responsive<BorderOpacity>;
   borderStyle?: Responsive<BorderStyle>;
-  divide?: Responsive<DivideWidth>;
+  divideX?: Responsive<DivideWidth>;
+  divideY?: Responsive<DivideWidth>;
   divideColor?: Responsive<DivideColor>;
   divideOpacity?: Responsive<DivideOpacity>;
   divideStyle?: Responsive<DivideStyle>;
@@ -264,6 +266,13 @@ export interface TailwindProps {
   /** Tables */
   borderCollapse?: Responsive<BorderCollapse>;
   table?: Responsive<TableLayout>;
+
+  /** Transitions and Animations */
+  transition?: Responsive<Transition>;
+  duration?: Responsive<Duration>;
+  ease?: Responsive<Ease>;
+  delay?: Responsive<Delay>;
+  animate?: Responsive<Animation>;
 
   fillCurrent?: Responsive<boolean>;
 }
