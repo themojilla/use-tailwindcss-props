@@ -70,8 +70,14 @@ const resolver = {
   visible: (prop) => resolve("visible", prop),
   invisible: (prop) => resolve("invisible", prop),
   zIndex: (prop) => resolve("z", prop),
+  textColor: (prop) => resolve("text", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
-  return clean(Object.keys(props).map((key) => resolver[key](props[key])));
+  return clean(
+    Object.keys(props).map((key) => {
+      const resolveFn = resolver[key];
+      return resolveFn ? resolveFn(props[key]) : "";
+    })
+  );
 }

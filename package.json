@@ -6,6 +6,7 @@
   "author": "Taiki Ikeda",
   "license": "MIT",
   "dependencies": {
+    "@react-aria/button": "^3.3.0",
     "classnames": "^2.2.6",
     "react": "17.0.1",
     "react-dom": "17.0.1"
