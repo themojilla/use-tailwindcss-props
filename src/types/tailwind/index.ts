@@ -30,7 +30,9 @@ import {
   Overscroll,
   Position,
   ZIndex,
+  TailwindSpaces,
 } from "./layout";
+import { Margin, Padding, SpaceBetween } from "./spacing";
 
 type Responsive<T> = T | T[] | TailwindResponsive<T>;
 
@@ -101,72 +103,28 @@ export interface TailwindProps {
   placeItems?: Responsive<PlaceItems>;
   placeSelf?: Responsive<PlaceSelf>;
 
+  /** Spacing */
+  p?: Responsive<Padding>;
+  px?: Responsive<Padding>;
+  py?: Responsive<Padding>;
+  pt?: Responsive<Padding>;
+  pb?: Responsive<Padding>;
+  pr?: Responsive<Padding>;
+  pl?: Responsive<Padding>;
+  m?: Responsive<Margin>;
+  mx?: Responsive<Margin>;
+  my?: Responsive<Margin>;
+  mt?: Responsive<Margin>;
+  mb?: Responsive<Margin>;
+  mr?: Responsive<Margin>;
+  ml?: Responsive<Margin>;
+  spaceX?: Responsive<SpaceBetween>;
+  spaceY?: Responsive<SpaceBetween>;
+
   textColor?: Responsive<TailwindColors>;
   borderColor?: Responsive<TailwindColors>;
   fillCurrent?: Responsive<boolean>;
 }
-
-type TailwindSpaces =
-  | "auto"
-  | "px"
-  | "0"
-  | "0.5"
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "8"
-  | "10"
-  | "12"
-  | "16"
-  | "20"
-  | "24"
-  | "32"
-  | "40"
-  | "48"
-  | "56"
-  | "64"
-  | "72"
-  | "80"
-  | "96"
-  | "1/2"
-  | "1/3"
-  | "2/3"
-  | "1/4"
-  | "2/4"
-  | "3/4"
-  | "full"
-  | "-px"
-  | "-0.5"
-  | "-1"
-  | "-2"
-  | "-3"
-  | "-4"
-  | "-5"
-  | "-6"
-  | "-8"
-  | "-10"
-  | "-12"
-  | "-16"
-  | "-20"
-  | "-24"
-  | "-32"
-  | "-40"
-  | "-48"
-  | "-56"
-  | "-64"
-  | "-72"
-  | "-80"
-  | "-96"
-  | "-1/2"
-  | "-1/3"
-  | "-2/3"
-  | "-1/4"
-  | "-2/4"
-  | "-3/4"
-  | "-full";
 
 type TailwindColors =
   | "gray-100"

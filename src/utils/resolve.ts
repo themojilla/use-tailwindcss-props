@@ -71,6 +71,7 @@ const resolver = {
   visible: (prop) => resolve("visible", prop),
   invisible: (prop) => resolve("invisible", prop),
   zIndex: (prop) => resolve("z", prop),
+
   /** Flex */
   flexDirection: (prop) => resolve("flex", prop),
   flexWrap: (prop) => resolve("flex", prop),
@@ -78,6 +79,7 @@ const resolver = {
   flexGrow: (prop) => resolve("flex-grow", prop),
   flexShrink: (prop) => resolve("flex-shrink", prop),
   order: (prop) => resolve("order", prop),
+
   /** Grid */
   gridTemplateCols: (prop) => resolve("grid-cols", prop),
   gridTemplateRows: (prop) => resolve("grid-rows", prop),
@@ -89,6 +91,7 @@ const resolver = {
   gap: (prop) => resolve("gap", prop),
   gapX: (prop) => resolve("gap-x", prop),
   gapY: (prop) => resolve("gap-y", prop),
+
   /** Box Alignment */
   justifyContent: (prop) => resolve("justify", prop),
   justifyItems: (prop) => resolve("justify-items", prop),
@@ -99,6 +102,24 @@ const resolver = {
   placeContent: (prop) => resolve("place-content", prop),
   placeItems: (prop) => resolve("place-items", prop),
   placeSelf: (prop) => resolve("place-self", prop),
+
+  /** Spacing */
+  p: (prop) => resolve("p", prop),
+  px: (prop) => resolve("px", prop),
+  py: (prop) => resolve("py", prop),
+  pt: (prop) => resolve("pt", prop),
+  pb: (prop) => resolve("pb", prop),
+  pr: (prop) => resolve("pr", prop),
+  pl: (prop) => resolve("pl", prop),
+  m: (prop) => resolve("m", prop),
+  mx: (prop) => resolve("mx", prop),
+  my: (prop) => resolve("my", prop),
+  mt: (prop) => resolve("mt", prop),
+  mb: (prop) => resolve("mb", prop),
+  mr: (prop) => resolve("mr", prop),
+  ml: (prop) => resolve("ml", prop),
+  spaceX: (prop) => resolve("space-x", prop),
+  spaceY: (prop) => resolve("space-y", prop),
   textColor: (prop) => resolve("text", prop),
 };
 
