@@ -69,6 +69,7 @@ import {
   Width,
 } from "./sizing";
 import { Margin, Padding, SpaceBetween } from "./spacing";
+import { BorderCollapse, TableLayout } from "./table";
 import {
   FontFamily,
   FontSize,
@@ -259,5 +260,10 @@ export interface TailwindProps {
   /** Effects */
   shadow?: Responsive<TailwindShadows>;
   opacity?: Responsive<TailwindOpacities>;
+
+  /** Tables */
+  borderCollapse?: Responsive<BorderCollapse>;
+  table?: Responsive<TableLayout>;
+
   fillCurrent?: Responsive<boolean>;
 }
