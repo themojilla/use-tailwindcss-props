@@ -75,3 +75,4 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 - Unable to use tailwind custom plugins.
 - Multiple pseudo classes are not supported (ex: `md:focus:text-black`).
 - There could be invalid type suggestions which is not going to change your UI, based on your settings on `tailwind.config.js` (ex: `active:m-4`).
+- `purge` from `tailwind.config.js` may not going to work because `use-tailwindcss-props` generates classNames at runtime.
