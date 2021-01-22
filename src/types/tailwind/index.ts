@@ -1,3 +1,48 @@
+import {
+  AlignContent,
+  AlignItems,
+  AlignSelf,
+  JustifyContent,
+  JustifyItems,
+  JustifySelf,
+  PlaceContent,
+  PlaceItems,
+  PlaceSelf,
+} from "./alignment";
+import { FlexDirection, FlexWrap, Flex, FlexGrowShrink, Order } from "./flex";
+import {
+  GridTemplateCols,
+  GridTemplateRows,
+  GridCols,
+  GridRows,
+  GridFlow,
+  GridAuto,
+  Gap,
+} from "./grid";
+import {
+  BoxSizing,
+  Display,
+  Float,
+  Clear,
+  ObjectFit,
+  ObjectPosition,
+  Overflow,
+  Overscroll,
+  Position,
+  ZIndex,
+} from "./layout";
+
+type Responsive<T> = T | T[] | TailwindResponsive<T>;
+
+interface TailwindResponsive<T> {
+  base?: T;
+  sm?: T;
+  md?: T;
+  lg?: T;
+  xl?: T;
+  "2xl"?: T;
+}
+
 export interface TailwindProps {
   /** Layout */
   container?: Responsive<boolean>;
@@ -45,201 +90,21 @@ export interface TailwindProps {
   gapX?: Responsive<Gap>;
   gapY?: Responsive<Gap>;
 
+  /** Box Alignment */
+  justifyContent?: Responsive<JustifyContent>;
+  justifyItems?: Responsive<JustifyItems>;
+  justifySelf?: Responsive<JustifySelf>;
+  alignContent?: Responsive<AlignContent>;
+  alignItems?: Responsive<AlignItems>;
+  alignSelf?: Responsive<AlignSelf>;
+  placeContent?: Responsive<PlaceContent>;
+  placeItems?: Responsive<PlaceItems>;
+  placeSelf?: Responsive<PlaceSelf>;
+
   textColor?: Responsive<TailwindColors>;
   borderColor?: Responsive<TailwindColors>;
   fillCurrent?: Responsive<boolean>;
 }
-
-type Responsive<T> = T | T[] | TailwindResponsive<T>;
-
-interface TailwindResponsive<T> {
-  base?: T;
-  sm?: T;
-  md?: T;
-  lg?: T;
-  xl?: T;
-  "2xl"?: T;
-}
-
-type BoxSizing = "border" | "content";
-type Display =
-  | "block"
-  | "hidden"
-  | "flex"
-  | "grid"
-  | "inline"
-  | "inline-block"
-  | "inline-flex"
-  | "inline-grid"
-  | "flow-root"
-  | "table"
-  | "table-caption"
-  | "table-cell"
-  | "table-column"
-  | "table-column-group"
-  | "table-footer-group"
-  | "table-header-group"
-  | "table-row-group"
-  | "table-row"
-  | "contents";
-type Float = "left" | "right" | "none";
-type Clear = "left" | "right" | "both" | "none";
-type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
-type ObjectPosition =
-  | "bottom"
-  | "center"
-  | "left"
-  | "left-bottom"
-  | "left-top"
-  | "right"
-  | "right-bottom"
-  | "right-top"
-  | "top";
-type Overflow = "auto" | "hidden" | "visible" | "scroll";
-type Overscroll = "auto" | "contain" | "none";
-type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
-type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
-type FlexDirection = "row" | "row-reverse" | "col" | "col-reverse";
-type FlexWrap = "wrap" | "wrap-reverse" | "nowrap";
-type Flex = "1" | "auto" | "initial" | "none";
-type FlexGrowShrink = "0" | true;
-type Order =
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "first"
-  | "last"
-  | "none";
-type GridTemplateCols =
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "none";
-type GridTemplateRows = "1" | "2" | "3" | "4" | "5" | "6" | "none";
-type GridCols =
-  | "auto"
-  | "span-1"
-  | "span-2"
-  | "span-3"
-  | "span-4"
-  | "span-5"
-  | "span-6"
-  | "span-7"
-  | "span-8"
-  | "span-9"
-  | "span-10"
-  | "span-11"
-  | "span-12"
-  | "span-full"
-  | "start-auto"
-  | "start-1"
-  | "start-2"
-  | "start-3"
-  | "start-4"
-  | "start-5"
-  | "start-6"
-  | "start-7"
-  | "start-8"
-  | "start-9"
-  | "start-10"
-  | "start-11"
-  | "start-12"
-  | "start-13"
-  | "end-auto"
-  | "end-1"
-  | "end-2"
-  | "end-3"
-  | "end-4"
-  | "end-5"
-  | "end-6"
-  | "end-7"
-  | "end-8"
-  | "end-9"
-  | "end-10"
-  | "end-11"
-  | "end-12"
-  | "end-13";
-type GridRows =
-  | "auto"
-  | "span-1"
-  | "span-2"
-  | "span-3"
-  | "span-4"
-  | "span-5"
-  | "span-6"
-  | "span-full"
-  | "start-auto"
-  | "start-1"
-  | "start-2"
-  | "start-3"
-  | "start-4"
-  | "start-5"
-  | "start-6"
-  | "start-7"
-  | "end-auto"
-  | "end-1"
-  | "end-2"
-  | "end-3"
-  | "end-4"
-  | "end-5"
-  | "end-6"
-  | "end-7";
-type GridFlow = "row" | "col" | "row-dense" | "col-dense";
-type GridAuto = "auto" | "min" | "max" | "fr";
-type Gap =
-  | "0"
-  | "0.5"
-  | "1"
-  | "1.5"
-  | "2"
-  | "2.5"
-  | "3"
-  | "3.5"
-  | "4"
-  | "5"
-  | "6"
-  | "7"
-  | "8"
-  | "9"
-  | "10"
-  | "11"
-  | "12"
-  | "14"
-  | "16"
-  | "20"
-  | "24"
-  | "28"
-  | "32"
-  | "36"
-  | "40"
-  | "44"
-  | "48"
-  | "52"
-  | "56"
-  | "60"
-  | "64"
-  | "72"
-  | "80"
-  | "96"
-  | "px";
 
 type TailwindSpaces =
   | "auto"

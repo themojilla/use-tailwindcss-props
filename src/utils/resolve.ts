@@ -89,6 +89,16 @@ const resolver = {
   gap: (prop) => resolve("gap", prop),
   gapX: (prop) => resolve("gap-x", prop),
   gapY: (prop) => resolve("gap-y", prop),
+  /** Box Alignment */
+  justifyContent: (prop) => resolve("justify", prop),
+  justifyItems: (prop) => resolve("justify-items", prop),
+  justifySelf: (prop) => resolve("justify-self", prop),
+  alignContent: (prop) => resolve("content", prop),
+  alignItems: (prop) => resolve("items", prop),
+  alignSelf: (prop) => resolve("self", prop),
+  placeContent: (prop) => resolve("place-content", prop),
+  placeItems: (prop) => resolve("place-items", prop),
+  placeSelf: (prop) => resolve("place-self", prop),
   textColor: (prop) => resolve("text", prop),
 };
 
