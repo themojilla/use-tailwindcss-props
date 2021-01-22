@@ -120,6 +120,15 @@ const resolver = {
   ml: (prop) => resolve("ml", prop),
   spaceX: (prop) => resolve("space-x", prop),
   spaceY: (prop) => resolve("space-y", prop),
+
+  /** Sizing */
+  w: (prop) => resolve("w", prop),
+  minW: (prop) => resolve("min-w", prop),
+  maxW: (prop) => resolve("max-w", prop),
+  h: (prop) => resolve("h", prop),
+  minH: (prop) => resolve("min-h", prop),
+  maxH: (prop) => resolve("max-h", prop),
+
   textColor: (prop) => resolve("text", prop),
 };
 

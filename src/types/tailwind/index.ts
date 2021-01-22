@@ -32,6 +32,14 @@ import {
   ZIndex,
   TailwindSpaces,
 } from "./layout";
+import {
+  Height,
+  MaxHeight,
+  MaxWidth,
+  MinHeight,
+  MinWidth,
+  Width,
+} from "./sizing";
 import { Margin, Padding, SpaceBetween } from "./spacing";
 
 type Responsive<T> = T | T[] | TailwindResponsive<T>;
@@ -120,6 +128,14 @@ export interface TailwindProps {
   ml?: Responsive<Margin>;
   spaceX?: Responsive<SpaceBetween>;
   spaceY?: Responsive<SpaceBetween>;
+
+  /** Sizing */
+  w?: Responsive<Width>;
+  minW?: Responsive<MinWidth>;
+  maxW?: Responsive<MaxWidth>;
+  h?: Responsive<Height>;
+  minH?: Responsive<MinHeight>;
+  maxH?: Responsive<MaxHeight>;
 
   textColor?: Responsive<TailwindColors>;
   borderColor?: Responsive<TailwindColors>;
