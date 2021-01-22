@@ -46,6 +46,7 @@ function resolve<T>(prefix: string, property: T) {
 }
 
 const resolver = {
+  /** Layout */
   container: (prop) => resolve("container", prop),
   boxSizing: (prop) => resolve("box", prop),
   display: (prop) => resolve("", prop),
@@ -70,13 +71,25 @@ const resolver = {
   visible: (prop) => resolve("visible", prop),
   invisible: (prop) => resolve("invisible", prop),
   zIndex: (prop) => resolve("z", prop),
-  textColor: (prop) => resolve("text", prop),
+  /** Flex */
   flexDirection: (prop) => resolve("flex", prop),
   flexWrap: (prop) => resolve("flex", prop),
   flex: (prop) => resolve("flex", prop),
   flexGrow: (prop) => resolve("flex-grow", prop),
   flexShrink: (prop) => resolve("flex-shrink", prop),
   order: (prop) => resolve("order", prop),
+  /** Grid */
+  gridTemplateCols: (prop) => resolve("grid-cols", prop),
+  gridTemplateRows: (prop) => resolve("grid-rows", prop),
+  gridCols: (prop) => resolve("col", prop),
+  gridRow: (prop) => resolve("row", prop),
+  gridFlow: (prop) => resolve("grid-flow", prop),
+  autoCols: (prop) => resolve("auto-cols", prop),
+  autoRows: (prop) => resolve("auto-rows", prop),
+  gap: (prop) => resolve("gap", prop),
+  gapX: (prop) => resolve("gap-x", prop),
+  gapY: (prop) => resolve("gap-y", prop),
+  textColor: (prop) => resolve("text", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
