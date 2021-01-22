@@ -36,6 +36,7 @@ import {
   RingOpacity,
   RingWidth,
 } from "./border";
+import { TailwindOpacities, TailwindShadows } from "./color";
 import { FlexDirection, FlexWrap, Flex, FlexGrowShrink, Order } from "./flex";
 import {
   GridTemplateCols,
@@ -255,5 +256,8 @@ export interface TailwindProps {
   ringOffsetWidth?: Responsive<RingOffsetWidth>;
   ringOffsetColor?: Responsive<RingOffsetColor>;
 
+  /** Effects */
+  shadow?: Responsive<TailwindShadows>;
+  opacity?: Responsive<TailwindOpacities>;
   fillCurrent?: Responsive<boolean>;
 }

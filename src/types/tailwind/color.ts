@@ -120,3 +120,13 @@ export type TailwindOpacities =
   | "90"
   | "95"
   | "100";
+
+export type TailwindShadows =
+  | true
+  | "sm"
+  | "md"
+  | "lg"
+  | "xl"
+  | "2xl"
+  | "inner"
+  | "none";
