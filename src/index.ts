@@ -1,1 +1,2 @@
-export * from "./components";
+export { useTailwindProps } from "./utils";
+export { TailwindProps } from "./types";

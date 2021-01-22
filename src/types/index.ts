@@ -118,7 +118,234 @@ interface TailwindResponsive<T> {
   "2xl"?: T;
 }
 
-export interface TailwindProps {
+export interface TailwindProps extends InteractionProps {
+  _sm?: BasicProps;
+  _md?: BasicProps;
+  _lg?: BasicProps;
+  _xl?: BasicProps;
+  _2xl?: BasicProps;
+}
+
+export interface InteractionProps extends ResponsiveProps {
+  _first?: ResponsiveProps;
+  _last?: ResponsiveProps;
+  _odd?: ResponsiveProps;
+  _even?: ResponsiveProps;
+  _visited?: ResponsiveProps;
+  _checked?: ResponsiveProps;
+  _groupHover?: ResponsiveProps;
+  _groupFocus?: ResponsiveProps;
+  _focusWithin?: ResponsiveProps;
+  _hover?: ResponsiveProps;
+  _focus?: ResponsiveProps;
+  _focusVisible?: ResponsiveProps;
+  _active?: ResponsiveProps;
+  _disabled?: ResponsiveProps;
+}
+
+export interface BasicProps {
+  /** Layout */
+  container?: boolean;
+  boxSizing?: BoxSizing;
+  display?: Display;
+  float?: Float;
+  clear?: Clear;
+  objectFit?: ObjectFit;
+  objectPosition?: ObjectPosition;
+  overflow?: Overflow;
+  overflowX?: Overflow;
+  overflowY?: Overflow;
+  overscroll?: Overscroll;
+  overscrollX?: Overscroll;
+  overscrollY?: Overscroll;
+  position?: Position;
+  top?: TailwindSpaces;
+  left?: TailwindSpaces;
+  bottom?: TailwindSpaces;
+  right?: TailwindSpaces;
+  inset?: TailwindSpaces;
+  insetX?: TailwindSpaces;
+  insetY?: TailwindSpaces;
+  visible?: boolean;
+  invisible?: boolean;
+  zIndex?: ZIndex;
+
+  /** Flex */
+  flexDirection?: FlexDirection;
+  flexWrap?: FlexWrap;
+  flex?: Flex;
+  flexGrow?: FlexGrowShrink;
+  flexShrink?: FlexGrowShrink;
+  order?: Order;
+
+  /** Grid */
+  gridTemplateCols?: GridTemplateCols;
+  gridTemplateRows?: GridTemplateRows;
+  gridCols?: GridCols;
+  gridRow?: GridRows;
+  gridFlow?: GridFlow;
+  autoCols?: GridAuto;
+  autoRows?: GridAuto;
+  gap?: Gap;
+  gapX?: Gap;
+  gapY?: Gap;
+
+  /** Box Alignment */
+  justifyContent?: JustifyContent;
+  justifyItems?: JustifyItems;
+  justifySelf?: JustifySelf;
+  alignContent?: AlignContent;
+  alignItems?: AlignItems;
+  alignSelf?: AlignSelf;
+  placeContent?: PlaceContent;
+  placeItems?: PlaceItems;
+  placeSelf?: PlaceSelf;
+
+  /** Spacing */
+  p?: Padding;
+  px?: Padding;
+  py?: Padding;
+  pt?: Padding;
+  pb?: Padding;
+  pr?: Padding;
+  pl?: Padding;
+  m?: Margin;
+  mx?: Margin;
+  my?: Margin;
+  mt?: Margin;
+  mb?: Margin;
+  mr?: Margin;
+  ml?: Margin;
+  spaceX?: SpaceBetween;
+  spaceY?: SpaceBetween;
+
+  /** Sizing */
+  w?: Width;
+  minW?: MinWidth;
+  maxW?: MaxWidth;
+  h?: Height;
+  minH?: MinHeight;
+  maxH?: MaxHeight;
+
+  /** Typography */
+  font?: FontFamily;
+  fontSize?: FontSize;
+  italic?: boolean;
+  nonItalic?: boolean;
+  antialiased?: boolean;
+  subpixelAntialiased?: boolean;
+  fontWeight?: FontWeight;
+  fontVariantNumeric?: FontVariantNumeric;
+  tracking?: LetterSpacing;
+  leading?: LineHeight;
+  listStyle?: ListStyle;
+  listPosition?: ListStylePosition;
+  placeholderColor?: PlaceholderColor;
+  placeholderOpacity?: PlaceholderOpacity;
+  textAlign?: TextAlign;
+  textColor?: TextColor;
+  textOpacity?: TextOpacity;
+  textOverflow?: TextOverflow;
+  underline?: boolean;
+  lineThrough?: boolean;
+  noUnderline?: boolean;
+  uppercase?: boolean;
+  lowercase?: boolean;
+  capitalize?: boolean;
+  normalCase?: boolean;
+  truncate?: boolean;
+  align?: VerticalAlign;
+  whitespace?: Whitespace;
+  break?: Wordbreak;
+
+  /** Backgrounds */
+  bgAttachment?: BackgroundAttachment;
+  bgClip?: BackgroundClip;
+  bgColor?: BackgroundColor;
+  bgOpacity?: BackgroundOpacity;
+  bgPosition?: BackgroundPosition;
+  bgRepeat?: BackgroundRepeat;
+  bgSize?: BackgroundSize;
+  bgImage?: BackgroundImage;
+  gradientFrom?: GradientColor;
+  gradientVia?: GradientColor;
+  gradientTo?: GradientColor;
+
+  /** Borders */
+  rounded?: BorderRadius;
+  roundedT?: BorderRadius;
+  roundedB?: BorderRadius;
+  roundedL?: BorderRadius;
+  roundedR?: BorderRadius;
+  roundedTl?: BorderRadius;
+  roundedTr?: BorderRadius;
+  roundedBl?: BorderRadius;
+  roundedBr?: BorderRadius;
+  border?: BorderWidth;
+  borderT?: BorderWidth;
+  borderB?: BorderWidth;
+  borderL?: BorderWidth;
+  borderR?: BorderWidth;
+  borderColor?: BorderColor;
+  borderOpacity?: BorderOpacity;
+  borderStyle?: BorderStyle;
+  divideX?: DivideWidth;
+  divideY?: DivideWidth;
+  divideColor?: DivideColor;
+  divideOpacity?: DivideOpacity;
+  divideStyle?: DivideStyle;
+  ring?: RingWidth;
+  ringColor?: RingColor;
+  ringOpacity?: RingOpacity;
+  ringOffset?: RingOffsetWidth;
+  ringOffsetColor?: RingOffsetColor;
+
+  /** Effects */
+  shadow?: TailwindShadows;
+  opacity?: TailwindOpacities;
+
+  /** Tables */
+  borderCollapse?: BorderCollapse;
+  table?: TableLayout;
+
+  /** Transitions and Animations */
+  transition?: Transition;
+  duration?: Duration;
+  ease?: Ease;
+  delay?: Delay;
+  animate?: Animation;
+
+  /** Transforms */
+  transform?: Transform;
+  origin?: TransformOrigin;
+  scale?: Scale;
+  scaleX?: Scale;
+  scaleY?: Scale;
+  rotate?: Rotate;
+  translateX?: Translate;
+  translateY?: Translate;
+  skewX?: Skew;
+  skewY?: Skew;
+
+  /** Interactivity */
+  appearanceNone?: boolean;
+  cursor?: Cursor;
+  outline?: Outline;
+  pointerEvents?: PointerEvents;
+  resize?: Resize;
+  select?: UserSelect;
+
+  /** SVG */
+  fillCurrent?: boolean;
+  strokeCurrent?: boolean;
+  stroke?: StrokeWidth;
+
+  /** Screen Readers */
+  srOnly?: boolean;
+  notSrOnly?: boolean;
+}
+
+export interface ResponsiveProps {
   /** Layout */
   container?: Responsive<boolean>;
   boxSizing?: Responsive<BoxSizing>;
