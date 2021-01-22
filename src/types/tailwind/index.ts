@@ -76,6 +76,7 @@ import {
   Width,
 } from "./sizing";
 import { Margin, Padding, SpaceBetween } from "./spacing";
+import { StrokeWidth } from "./svg";
 import { BorderCollapse, TableLayout } from "./table";
 import {
   Rotate,
@@ -309,5 +310,12 @@ export interface TailwindProps {
   resize?: Responsive<Resize>;
   select?: Responsive<UserSelect>;
 
+  /** SVG */
   fillCurrent?: Responsive<boolean>;
+  strokeCurrent?: Responsive<boolean>;
+  stroke?: Responsive<StrokeWidth>;
+
+  /** Screen Readers */
+  srOnly?: Responsive<boolean>;
+  notSrOnly?: Responsive<boolean>;
 }

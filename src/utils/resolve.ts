@@ -228,6 +228,23 @@ const resolver = {
   translateY: (prop) => resolve("translate-y", prop),
   skewX: (prop) => resolve("skew-x", prop),
   skewY: (prop) => resolve("skew-y", prop),
+
+  /** Interactivity */
+  appearanceNone: (prop) => resolve("appearance-none", prop),
+  cursor: (prop) => resolve("cursor", prop),
+  outline: (prop) => resolve("outline", prop),
+  pointerEvents: (prop) => resolve("pointer-events", prop),
+  resize: (prop) => resolve("resize", prop),
+  select: (prop) => resolve("select", prop),
+
+  /** SVG */
+  fillCurrent: (prop) => resolve("fill-current", prop),
+  strokeCurrent: (prop) => resolve("stroke-current", prop),
+  stroke: (prop) => resolve("stroke", prop),
+
+  /** Screen Readers */
+  srOnly: (prop) => resolve("sr-only", prop),
+  notSrOnly: (prop) => resolve("not-sr-only", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
