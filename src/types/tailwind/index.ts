@@ -1,4 +1,5 @@
 export interface TailwindProps {
+  /** Layout */
   container?: Responsive<boolean>;
   boxSizing?: Responsive<BoxSizing>;
   display?: Responsive<Display>;
@@ -23,12 +24,21 @@ export interface TailwindProps {
   visible?: Responsive<boolean>;
   invisible?: Responsive<boolean>;
   zIndex?: Responsive<ZIndex>;
+
+  /** Flex */
+  flexDirection?: Responsive<FlexDirection>;
+  flexWrap?: Responsive<FlexWrap>;
+  flex?: Responsive<Flex>;
+  flexGrow?: Responsive<FlexGrowShrink>;
+  flexShrink?: Responsive<FlexGrowShrink>;
+  order?: Responsive<Order>;
+
   textColor?: Responsive<TailwindColors>;
   borderColor?: Responsive<TailwindColors>;
   fillCurrent?: Responsive<boolean>;
 }
 
-export type Responsive<T> = T | T[] | TailwindResponsive<T>;
+type Responsive<T> = T | T[] | TailwindResponsive<T>;
 
 interface TailwindResponsive<T> {
   base?: T;
@@ -39,8 +49,8 @@ interface TailwindResponsive<T> {
   "2xl"?: T;
 }
 
-export type BoxSizing = "border" | "content";
-export type Display =
+type BoxSizing = "border" | "content";
+type Display =
   | "block"
   | "hidden"
   | "flex"
@@ -60,10 +70,10 @@ export type Display =
   | "table-row-group"
   | "table-row"
   | "contents";
-export type Float = "left" | "right" | "none";
-export type Clear = "left" | "right" | "both" | "none";
-export type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
-export type ObjectPosition =
+type Float = "left" | "right" | "none";
+type Clear = "left" | "right" | "both" | "none";
+type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
+type ObjectPosition =
   | "bottom"
   | "center"
   | "left"
@@ -73,12 +83,32 @@ export type ObjectPosition =
   | "right-bottom"
   | "right-top"
   | "top";
-export type Overflow = "auto" | "hidden" | "visible" | "scroll";
-export type Overscroll = "auto" | "contain" | "none";
-export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
-export type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
+type Overflow = "auto" | "hidden" | "visible" | "scroll";
+type Overscroll = "auto" | "contain" | "none";
+type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
+type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
+type FlexDirection = "row" | "row-reverse" | "col" | "col-reverse";
+type FlexWrap = "wrap" | "wrap-reverse" | "nowrap";
+type Flex = "1" | "auto" | "initial" | "none";
+type FlexGrowShrink = "0" | true;
+type Order =
+  | "1"
+  | "2"
+  | "3"
+  | "4"
+  | "5"
+  | "6"
+  | "7"
+  | "8"
+  | "9"
+  | "10"
+  | "11"
+  | "12"
+  | "first"
+  | "last"
+  | "none";
 
-export type TailwindSpaces =
+type TailwindSpaces =
   | "auto"
   | "px"
   | "0"
@@ -140,7 +170,7 @@ export type TailwindSpaces =
   | "-3/4"
   | "-full";
 
-export type TailwindColors =
+type TailwindColors =
   | "gray-100"
   | "gray-200"
   | "gray-300"

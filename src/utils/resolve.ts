@@ -71,6 +71,12 @@ const resolver = {
   invisible: (prop) => resolve("invisible", prop),
   zIndex: (prop) => resolve("z", prop),
   textColor: (prop) => resolve("text", prop),
+  flexDirection: (prop) => resolve("flex", prop),
+  flexWrap: (prop) => resolve("flex", prop),
+  flex: (prop) => resolve("flex", prop),
+  flexGrow: (prop) => resolve("flex-grow", prop),
+  flexShrink: (prop) => resolve("flex-shrink", prop),
+  order: (prop) => resolve("order", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
