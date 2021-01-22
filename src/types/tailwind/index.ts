@@ -9,6 +9,17 @@ import {
   PlaceItems,
   PlaceSelf,
 } from "./alignment";
+import {
+  BackgroundAttachment,
+  BackgroundClip,
+  BackgroundColor,
+  BackgroundImage,
+  BackgroundOpacity,
+  BackgroundPosition,
+  BackgroundRepeat,
+  BackgroundSize,
+  GradientColor,
+} from "./background";
 import { TailwindColors } from "./color";
 import { FlexDirection, FlexWrap, Flex, FlexGrowShrink, Order } from "./flex";
 import {
@@ -187,6 +198,19 @@ export interface TailwindProps {
   align?: Responsive<VerticalAlign>;
   whitespace?: Responsive<Whitespace>;
   break?: Responsive<Wordbreak>;
+
+  /** Backgrounds */
+  bgAttachment?: Responsive<BackgroundAttachment>;
+  bgClip?: Responsive<BackgroundClip>;
+  bgColor?: Responsive<BackgroundColor>;
+  bgOpacity?: Responsive<BackgroundOpacity>;
+  bgPosition?: Responsive<BackgroundPosition>;
+  bgRepeat?: Responsive<BackgroundRepeat>;
+  bgSize?: Responsive<BackgroundSize>;
+  bgImage?: Responsive<BackgroundImage>;
+  gradientFrom?: Responsive<GradientColor>;
+  gradientVia?: Responsive<GradientColor>;
+  gradientTo?: Responsive<GradientColor>;
 
   borderColor?: Responsive<TailwindColors>;
   fillCurrent?: Responsive<boolean>;

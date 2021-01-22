@@ -159,6 +159,19 @@ const resolver = {
   align: (prop) => resolve("align", prop),
   whitespace: (prop) => resolve("whitespace", prop),
   break: (prop) => resolve("break", prop),
+
+  /** Backgrounds */
+  bgAttachment: (prop) => resolve("bg", prop),
+  bgClip: (prop) => resolve("bg-clip", prop),
+  bgColor: (prop) => resolve("bg", prop),
+  bgOpacity: (prop) => resolve("bg-opacity", prop),
+  bgPosition: (prop) => resolve("bg", prop),
+  bgRepeat: (prop) => resolve("bg", prop),
+  bgSize: (prop) => resolve("bg", prop),
+  bgImage: (prop) => resolve("bg", prop),
+  gradientFrom: (prop) => resolve("from", prop),
+  gradientVia: (prop) => resolve("via", prop),
+  gradientTo: (prop) => resolve("to", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
