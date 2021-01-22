@@ -5,6 +5,9 @@
   "module": "./build/index.es.js",
   "author": "Taiki Ikeda",
   "license": "MIT",
+  "files": [
+    "build"
+  ],
   "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {
