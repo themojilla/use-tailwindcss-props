@@ -1,56 +1,34 @@
-export interface TailwindTypes {
-  container?: boolean | boolean[] | TailwindResponsive<boolean>;
-  boxSizing?: BoxSizing | BoxSizing[] | TailwindResponsive<BoxSizing>;
-  display?: Display | Display[] | TailwindResponsive<Display>;
-  float?: Float | Float[] | TailwindResponsive<Float>;
-  clear?: Clear | Clear[] | TailwindResponsive<Clear>;
-  objectFit?: ObjectFit | ObjectFit[] | TailwindResponsive<ObjectFit>;
-  objectPosition?:
-    | ObjectPosition
-    | ObjectPosition[]
-    | TailwindResponsive<ObjectPosition>;
-  overflow?: Overflow | Overflow[] | TailwindResponsive<Overflow>;
-  overflowX?: Overflow | Overflow[] | TailwindResponsive<Overflow>;
-  overflowY?: Overflow | Overflow[] | TailwindResponsive<Overflow>;
-  overscroll?: Overscroll | Overscroll[] | TailwindResponsive<Overscroll>;
-  overscrollX?: Overscroll | Overscroll[] | TailwindResponsive<Overscroll>;
-  overscrollY?: Overscroll | Overscroll[] | TailwindResponsive<Overscroll>;
-  position?: Position | Position[] | TailwindResponsive<Position>;
-  top?: TailwindSpaces | TailwindSpaces[] | TailwindResponsive<TailwindSpaces>;
-  left?: TailwindSpaces | TailwindSpaces[] | TailwindResponsive<TailwindSpaces>;
-  right?:
-    | TailwindSpaces
-    | TailwindSpaces[]
-    | TailwindResponsive<TailwindSpaces>;
-  bottom?:
-    | TailwindSpaces
-    | TailwindSpaces[]
-    | TailwindResponsive<TailwindSpaces>;
-  inset?:
-    | TailwindSpaces
-    | TailwindSpaces[]
-    | TailwindResponsive<TailwindSpaces>;
-  insetX?:
-    | TailwindSpaces
-    | TailwindSpaces[]
-    | TailwindResponsive<TailwindSpaces>;
-  insetY?:
-    | TailwindSpaces
-    | TailwindSpaces[]
-    | TailwindResponsive<TailwindSpaces>;
-  visible?: boolean | boolean[] | TailwindResponsive<boolean>;
-  invisible?: boolean | boolean[] | TailwindResponsive<boolean>;
-  zIndex?: ZIndex | ZIndex[] | TailwindResponsive<ZIndex>;
-  textColor?:
-    | TailwindColors
-    | TailwindColors[]
-    | TailwindResponsive<TailwindColors>;
-  borderColor?:
-    | TailwindColors
-    | TailwindColors[]
-    | TailwindResponsive<TailwindColors>;
-  fillCurrent?: boolean;
+export interface TailwindProps {
+  container?: Responsive<boolean>;
+  boxSizing?: Responsive<BoxSizing>;
+  display?: Responsive<Display>;
+  float?: Responsive<Float>;
+  clear?: Responsive<Clear>;
+  objectFit?: Responsive<ObjectFit>;
+  objectPosition?: Responsive<ObjectPosition>;
+  overflow?: Responsive<Overflow>;
+  overflowX?: Responsive<Overflow>;
+  overflowY?: Responsive<Overflow>;
+  overscroll?: Responsive<Overscroll>;
+  overscrollX?: Responsive<Overscroll>;
+  overscrollY?: Responsive<Overscroll>;
+  position?: Responsive<Position>;
+  top?: Responsive<TailwindSpaces>;
+  left?: Responsive<TailwindSpaces>;
+  bottom?: Responsive<TailwindSpaces>;
+  right?: Responsive<TailwindSpaces>;
+  inset?: Responsive<TailwindSpaces>;
+  insetX?: Responsive<TailwindSpaces>;
+  insetY?: Responsive<TailwindSpaces>;
+  visible?: Responsive<boolean>;
+  invisible?: Responsive<boolean>;
+  zIndex?: Responsive<ZIndex>;
+  textColor?: Responsive<TailwindColors>;
+  borderColor?: Responsive<TailwindColors>;
+  fillCurrent?: Responsive<boolean>;
 }
+
+export type Responsive<T> = T | T[] | TailwindResponsive<T>;
 
 interface TailwindResponsive<T> {
   base?: T;
@@ -61,8 +39,8 @@ interface TailwindResponsive<T> {
   "2xl"?: T;
 }
 
-type BoxSizing = "border-box" | "content-box";
-type Display =
+export type BoxSizing = "border" | "content";
+export type Display =
   | "block"
   | "hidden"
   | "flex"
@@ -82,10 +60,10 @@ type Display =
   | "table-row-group"
   | "table-row"
   | "contents";
-type Float = "left" | "right" | "none";
-type Clear = "left" | "right" | "both" | "none";
-type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
-type ObjectPosition =
+export type Float = "left" | "right" | "none";
+export type Clear = "left" | "right" | "both" | "none";
+export type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
+export type ObjectPosition =
   | "bottom"
   | "center"
   | "left"
@@ -95,12 +73,12 @@ type ObjectPosition =
   | "right-bottom"
   | "right-top"
   | "top";
-type Overflow = "auto" | "hidden" | "visible" | "scroll";
-type Overscroll = "auto" | "contain" | "none";
-type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
-type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
+export type Overflow = "auto" | "hidden" | "visible" | "scroll";
+export type Overscroll = "auto" | "contain" | "none";
+export type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
+export type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
 
-type TailwindSpaces =
+export type TailwindSpaces =
   | "auto"
   | "px"
   | "0"
@@ -162,29 +140,7 @@ type TailwindSpaces =
   | "-3/4"
   | "-full";
 
-type TailwindSizes =
-  | "px"
-  | "0"
-  | "1"
-  | "2"
-  | "3"
-  | "4"
-  | "5"
-  | "6"
-  | "8"
-  | "10"
-  | "12"
-  | "16"
-  | "20"
-  | "24"
-  | "32"
-  | "40"
-  | "48"
-  | "56"
-  | "64"
-  | "auto";
-
-type TailwindColors =
+export type TailwindColors =
   | "gray-100"
   | "gray-200"
   | "gray-300"
