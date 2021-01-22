@@ -20,7 +20,22 @@ import {
   BackgroundSize,
   GradientColor,
 } from "./background";
-import { TailwindColors } from "./color";
+import {
+  BorderColor,
+  BorderOpacity,
+  BorderRadius,
+  BorderStyle,
+  BorderWidth,
+  DivideColor,
+  DivideOpacity,
+  DivideStyle,
+  DivideWidth,
+  RingColor,
+  RingOffsetColor,
+  RingOffsetWidth,
+  RingOpacity,
+  RingWidth,
+} from "./border";
 import { FlexDirection, FlexWrap, Flex, FlexGrowShrink, Order } from "./flex";
 import {
   GridTemplateCols,
@@ -212,6 +227,33 @@ export interface TailwindProps {
   gradientVia?: Responsive<GradientColor>;
   gradientTo?: Responsive<GradientColor>;
 
-  borderColor?: Responsive<TailwindColors>;
+  /** Borders */
+  rounded?: Responsive<BorderRadius>;
+  roundedT?: Responsive<BorderRadius>;
+  roundedB?: Responsive<BorderRadius>;
+  roundedL?: Responsive<BorderRadius>;
+  roundedR?: Responsive<BorderRadius>;
+  roundedTl?: Responsive<BorderRadius>;
+  roundedTr?: Responsive<BorderRadius>;
+  roundedBl?: Responsive<BorderRadius>;
+  roundedBr?: Responsive<BorderRadius>;
+  border?: Responsive<BorderWidth>;
+  borderT?: Responsive<BorderWidth>;
+  borderB?: Responsive<BorderWidth>;
+  borderL?: Responsive<BorderWidth>;
+  borderR?: Responsive<BorderWidth>;
+  borderColor?: Responsive<BorderColor>;
+  borderOpacity?: Responsive<BorderOpacity>;
+  borderStyle?: Responsive<BorderStyle>;
+  divide?: Responsive<DivideWidth>;
+  divideColor?: Responsive<DivideColor>;
+  divideOpacity?: Responsive<DivideOpacity>;
+  divideStyle?: Responsive<DivideStyle>;
+  ring?: Responsive<RingWidth>;
+  ringColor?: Responsive<RingColor>;
+  ringOpacity?: Responsive<RingOpacity>;
+  ringOffsetWidth?: Responsive<RingOffsetWidth>;
+  ringOffsetColor?: Responsive<RingOffsetColor>;
+
   fillCurrent?: Responsive<boolean>;
 }
