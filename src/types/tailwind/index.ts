@@ -48,6 +48,13 @@ import {
   Gap,
 } from "./grid";
 import {
+  Cursor,
+  Outline,
+  PointerEvents,
+  Resize,
+  UserSelect,
+} from "./interactivity";
+import {
   BoxSizing,
   Display,
   Float,
@@ -293,6 +300,14 @@ export interface TailwindProps {
   translateY?: Responsive<Translate>;
   skewX?: Responsive<Skew>;
   skewY?: Responsive<Skew>;
+
+  /** Interactivity */
+  appearanceNone?: Responsive<boolean>;
+  cursor?: Responsive<Cursor>;
+  outline?: Responsive<Outline>;
+  pointerEvents?: Responsive<PointerEvents>;
+  resize?: Responsive<Resize>;
+  select?: Responsive<UserSelect>;
 
   fillCurrent?: Responsive<boolean>;
 }
