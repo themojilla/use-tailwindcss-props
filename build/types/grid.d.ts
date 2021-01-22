@@ -1,0 +1,7 @@
+export declare type GridTemplateCols = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "none";
+export declare type GridTemplateRows = "1" | "2" | "3" | "4" | "5" | "6" | "none";
+export declare type GridCols = "auto" | "span-1" | "span-2" | "span-3" | "span-4" | "span-5" | "span-6" | "span-7" | "span-8" | "span-9" | "span-10" | "span-11" | "span-12" | "span-full" | "start-auto" | "start-1" | "start-2" | "start-3" | "start-4" | "start-5" | "start-6" | "start-7" | "start-8" | "start-9" | "start-10" | "start-11" | "start-12" | "start-13" | "end-auto" | "end-1" | "end-2" | "end-3" | "end-4" | "end-5" | "end-6" | "end-7" | "end-8" | "end-9" | "end-10" | "end-11" | "end-12" | "end-13";
+export declare type GridRows = "auto" | "span-1" | "span-2" | "span-3" | "span-4" | "span-5" | "span-6" | "span-full" | "start-auto" | "start-1" | "start-2" | "start-3" | "start-4" | "start-5" | "start-6" | "start-7" | "end-auto" | "end-1" | "end-2" | "end-3" | "end-4" | "end-5" | "end-6" | "end-7";
+export declare type GridFlow = "row" | "col" | "row-dense" | "col-dense";
+export declare type GridAuto = "auto" | "min" | "max" | "fr";
+export declare type Gap = "0" | "0.5" | "1" | "1.5" | "2" | "2.5" | "3" | "3.5" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "14" | "16" | "20" | "24" | "28" | "32" | "36" | "40" | "44" | "48" | "52" | "56" | "60" | "64" | "72" | "80" | "96" | "px";

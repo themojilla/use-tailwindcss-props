@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/index.ts", "src/types/**/*", "src/utils/**/*"],
   "exclude": ["node_modules", "build"],
   "compilerOptions": {
     "declaration": true,

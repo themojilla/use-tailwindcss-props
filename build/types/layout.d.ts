@@ -1,0 +1,11 @@
+export declare type BoxSizing = "border" | "content";
+export declare type Display = "block" | "hidden" | "flex" | "grid" | "inline" | "inline-block" | "inline-flex" | "inline-grid" | "flow-root" | "table" | "table-caption" | "table-cell" | "table-column" | "table-column-group" | "table-footer-group" | "table-header-group" | "table-row-group" | "table-row" | "contents";
+export declare type Float = "left" | "right" | "none";
+export declare type Clear = "left" | "right" | "both" | "none";
+export declare type ObjectFit = "contain" | "cover" | "fill" | "none" | "scale-down";
+export declare type ObjectPosition = "bottom" | "center" | "left" | "left-bottom" | "left-top" | "right" | "right-bottom" | "right-top" | "top";
+export declare type Overflow = "auto" | "hidden" | "visible" | "scroll";
+export declare type Overscroll = "auto" | "contain" | "none";
+export declare type Position = "static" | "fixed" | "absolute" | "relative" | "sticky";
+export declare type ZIndex = "0" | "10" | "20" | "30" | "40" | "50" | "auto";
+export declare type TailwindSpaces = "auto" | "px" | "0" | "0.5" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | "10" | "11" | "12" | "14" | "16" | "20" | "24" | "28" | "32" | "36" | "40" | "44" | "48" | "52" | "56" | "60" | "64" | "72" | "80" | "96" | "1/2" | "1/3" | "2/3" | "1/4" | "2/4" | "3/4" | "full" | "-px" | "-0" | "-0.5" | "-1" | "-2" | "-3" | "-4" | "-5" | "-6" | "-7" | "-8" | "-9" | "-10" | "-11" | "-12" | "-14" | "-16" | "-20" | "-24" | "-28" | "-32" | "-36" | "-40" | "-44" | "-48" | "-52" | "-56" | "-60" | "-64" | "-72" | "-80" | "-96" | "-1/2" | "-1/3" | "-2/3" | "-1/4" | "-2/4" | "-3/4" | "-full";

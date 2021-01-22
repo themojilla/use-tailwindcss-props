@@ -195,8 +195,8 @@ export interface BasicProps {
   justifyItems?: JustifyItems;
   justifySelf?: JustifySelf;
   alignContent?: AlignContent;
-  alignItems?: AlignItems;
-  alignSelf?: AlignSelf;
+  items?: AlignItems;
+  self?: AlignSelf;
   placeContent?: PlaceContent;
   placeItems?: PlaceItems;
   placeSelf?: PlaceSelf;
@@ -229,7 +229,7 @@ export interface BasicProps {
 
   /** Typography */
   font?: FontFamily;
-  fontSize?: FontSize;
+  textSize?: FontSize;
   italic?: boolean;
   nonItalic?: boolean;
   antialiased?: boolean;
@@ -397,8 +397,8 @@ export interface ResponsiveProps {
   justifyItems?: Responsive<JustifyItems>;
   justifySelf?: Responsive<JustifySelf>;
   alignContent?: Responsive<AlignContent>;
-  alignItems?: Responsive<AlignItems>;
-  alignSelf?: Responsive<AlignSelf>;
+  items?: Responsive<AlignItems>;
+  self?: Responsive<AlignSelf>;
   placeContent?: Responsive<PlaceContent>;
   placeItems?: Responsive<PlaceItems>;
   placeSelf?: Responsive<PlaceSelf>;
@@ -431,7 +431,7 @@ export interface ResponsiveProps {
 
   /** Typography */
   font?: Responsive<FontFamily>;
-  fontSize?: Responsive<FontSize>;
+  textSize?: Responsive<FontSize>;
   italic?: Responsive<boolean>;
   nonItalic?: Responsive<boolean>;
   antialiased?: Responsive<boolean>;

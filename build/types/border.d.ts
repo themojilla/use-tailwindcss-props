@@ -1,0 +1,15 @@
+import { TailwindColors, TailwindOpacities } from "./color";
+export declare type BorderRadius = true | "none" | "sm" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "full";
+export declare type BorderWidth = true | "0" | "2" | "4" | "8";
+export declare type BorderColor = TailwindColors;
+export declare type BorderOpacity = TailwindOpacities;
+export declare type BorderStyle = "solid" | "dashed" | "dotted" | "double" | "none";
+export declare type DivideWidth = true | "0" | "2" | "4" | "8" | "reverse";
+export declare type DivideColor = TailwindColors;
+export declare type DivideOpacity = TailwindOpacities;
+export declare type DivideStyle = "solid" | "dashed" | "dotted" | "double" | "none";
+export declare type RingWidth = true | "0" | "1" | "2" | "4" | "8" | "inset";
+export declare type RingColor = TailwindColors;
+export declare type RingOpacity = TailwindOpacities;
+export declare type RingOffsetWidth = "0" | "1" | "2" | "4" | "8" | "inset";
+export declare type RingOffsetColor = TailwindColors;

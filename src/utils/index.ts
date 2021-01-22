@@ -19,7 +19,9 @@ function resolveProp<T>(prefix: string, property: T, pseudo: string) {
   if (typeof property === "string") {
     return isNegative(property)
       ? `${pseudo}-${prefix}${property}`
-      : `${pseudo}${prefix}-${property}`;
+      : !!prefix
+      ? `${pseudo}${prefix}-${property}`
+      : `${pseudo}${prefix}${property}`;
   }
   return "";
 }
@@ -100,8 +102,8 @@ function resolverFactory<T>(resolve: Resolve<T>, pseudo: string = "") {
     justifyItems: (prop) => resolve("justify-items", prop, pseudo),
     justifySelf: (prop) => resolve("justify-self", prop, pseudo),
     alignContent: (prop) => resolve("content", prop, pseudo),
-    alignItems: (prop) => resolve("items", prop, pseudo),
-    alignSelf: (prop) => resolve("self", prop, pseudo),
+    items: (prop) => resolve("items", prop, pseudo),
+    self: (prop) => resolve("self", prop, pseudo),
     placeContent: (prop) => resolve("place-content", prop, pseudo),
     placeItems: (prop) => resolve("place-items", prop, pseudo),
     placeSelf: (prop) => resolve("place-self", prop, pseudo),
@@ -134,7 +136,7 @@ function resolverFactory<T>(resolve: Resolve<T>, pseudo: string = "") {
 
     /** Typography */
     font: (prop) => resolve("font", prop, pseudo),
-    fontSize: (prop) => resolve("text", prop, pseudo),
+    textSize: (prop) => resolve("text", prop, pseudo),
     italic: (prop) => resolve("italic", prop, pseudo),
     nonItalic: (prop) => resolve("not-italic", prop, pseudo),
     antialiased: (prop) => resolve("antialiased", prop, pseudo),

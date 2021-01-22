@@ -1,0 +1,10 @@
+import { TailwindColors, TailwindOpacities } from "./color";
+export declare type BackgroundAttachment = "fixed" | "local" | "scroll";
+export declare type BackgroundClip = "border" | "padding" | "content" | "text";
+export declare type BackgroundColor = TailwindColors;
+export declare type BackgroundOpacity = TailwindOpacities;
+export declare type BackgroundPosition = "bottom" | "center" | "left" | "left-bottom" | "left-top" | "right-bottom" | "right-top" | "top";
+export declare type BackgroundRepeat = "repeat" | "no-repeat" | "repeat-x" | "repeat-y" | "repeat-round" | "repeat-space";
+export declare type BackgroundSize = "auto" | "cover" | "contain";
+export declare type BackgroundImage = "none" | "gradient-to-t" | "gradient-to-tr" | "gradient-to-r" | "gradient-to-br" | "gradient-to-b" | "gradient-to-bl" | "gradient-to-l" | "gradient-to-tl";
+export declare type GradientColor = TailwindColors;
