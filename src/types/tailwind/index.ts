@@ -70,6 +70,14 @@ import {
 } from "./sizing";
 import { Margin, Padding, SpaceBetween } from "./spacing";
 import { BorderCollapse, TableLayout } from "./table";
+import {
+  Rotate,
+  Scale,
+  Skew,
+  Transform,
+  TransformOrigin,
+  Translate,
+} from "./transform";
 import { Animation, Delay, Duration, Ease, Transition } from "./transition";
 import {
   FontFamily,
@@ -273,6 +281,18 @@ export interface TailwindProps {
   ease?: Responsive<Ease>;
   delay?: Responsive<Delay>;
   animate?: Responsive<Animation>;
+
+  /** Transforms */
+  transform?: Responsive<Transform>;
+  origin?: Responsive<TransformOrigin>;
+  scale?: Responsive<Scale>;
+  scaleX?: Responsive<Scale>;
+  scaleY?: Responsive<Scale>;
+  rotate?: Responsive<Rotate>;
+  translateX?: Responsive<Translate>;
+  translateY?: Responsive<Translate>;
+  skewX?: Responsive<Skew>;
+  skewY?: Responsive<Skew>;
 
   fillCurrent?: Responsive<boolean>;
 }

@@ -216,6 +216,18 @@ const resolver = {
   ease: (prop) => resolve("ease", prop),
   delay: (prop) => resolve("delay", prop),
   animate: (prop) => resolve("animate", prop),
+
+  /** Transforms */
+  transform: (prop) => resolve("transform", prop),
+  origin: (prop) => resolve("origin", prop),
+  scale: (prop) => resolve("scale", prop),
+  scaleX: (prop) => resolve("scale-x", prop),
+  scaleY: (prop) => resolve("scale-y", prop),
+  rotate: (prop) => resolve("rotate", prop),
+  translateX: (prop) => resolve("translate-x", prop),
+  translateY: (prop) => resolve("translate-y", prop),
+  skewX: (prop) => resolve("skew-x", prop),
+  skewY: (prop) => resolve("skew-y", prop),
 };
 
 export function resolveTailwindProps(props: TailwindProps) {
