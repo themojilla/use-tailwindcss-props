@@ -20,7 +20,7 @@ yarn add use-tailwindcss-props
 #### Create React Component
 
 ```jsx
-import react from "react";
+import React from "react";
 import { TailwindProps, useTailwindProps } from "use-tailwindcss-props";
 
 interface ButtonProps extends TailwindProps {}
